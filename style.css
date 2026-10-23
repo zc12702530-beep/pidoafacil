@@ -1,0 +1,188 @@
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Inter,Arial, sans-serif;
+    }
+
+    body{
+        background: #f6f7f9;
+        color: #222;
+    }
+
+    header{
+        background: #111827;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    header h1{
+        font-size: 28px;
+    }
+
+    nav{
+        margin-top: 15px;
+    }
+
+    nav button{
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        margin: 0 5px;
+        cursor: pointer;
+        background: #374151;
+        color: white;
+    }
+
+    nav button.active{
+        background: #22c55e;
+        color: black;
+        font-weight: bold;
+    }
+
+    main{
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    .card{
+        background: white;
+        padding: 25px;
+        border-radius: 16px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, .08);
+        margin-bottom: 20px;
+    }
+
+    .aba hidden{
+        display: none;
+    }
+
+    input,select,textarea{
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        font-size: 15px;
+    }
+
+    input[type="checkbox"]{
+        width: 18px !important;
+        height: 18px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .row{
+        display: flex;
+        gap: 10px;
+    }
+
+    .row *{
+        flex: 1;
+    }
+
+    .btn-primary{
+        width: 100%;
+        background: #22c55e;
+        color: black;
+        padding: 14px;
+        border: none;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .btn-primary:hover{
+        background: #16a34a;
+    }
+
+    #pix-area{
+        background: #f0fdf4;
+        border: 1px dashed #22c55e;
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    #pix-area code{
+        display: block;
+        background: white;
+        padding: 10px;
+        word-break: break-all;
+        margin: 10px 0;
+        border-radius: 8px;
+    }
+
+    .hidden{
+        display:none;
+    }
+
+    .gestor-header{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .stats{
+        display: flex;
+        gap: 20px;
+    }
+
+    .stats div{
+        background: #f3f4f6;
+        padding: 10px 15px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .stas strong{
+        display: block;
+        font-size: 18px;
+    }
+
+    .stats span{
+        font-size: 12px;
+        color: #666;
+    }
+
+    .acoes{
+        display: flex;
+        gap: 10px;
+        margin: 15px 0;
+        flex-wrap: wrap;
+    }
+
+    .acoes button{
+        padding: 10px 15px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        background: white;
+        cursor: pointer;
+    }
+
+    .btn-danger{
+        color: #ef4444;
+        border-color: #ef4444!important;
+    }
+
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+    }
+
+    th,td{
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        text-align: left;
+    }
+
+    th{
+        background: #f9fafb;
+    }

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoaFácil - Sistema Gestor de Doações</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>DoaFácil</h1>
+        <p>Sistema Gestor de Doações - APAE Bananal-SP</p>
+        <nav>
+            <button onclick="mostrarAba('doar')" class="active" id="btn-doar">Quero Doar</button>
+            <button onclick="mostrarAba('gestor')" id="btn-gestor">Painel Gestor</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- aba doador -->
+         <section id="aba-doar" class="aba">
+            <div class="card">
+                <h2>Faça sua Doação</h2>
+                <form id="formDoacao">
+                    <label><input type="checkbox" id="anonimo">Doação Anônima</label>
+                    <div id="campos-nome">
+                        <input type="text" id="nome" placeholder="Seu nome completo" required>
+                        <input type="email" id="email" placeholder="Seu e-mail" required>
+                    </div>
+
+                    <div class="row">
+                        <select id="tipo" required>
+                            <option value="">Tipo de doação</option>
+                            <option value="Dinheiro">Dinheiro</option>
+                            <option value="Alimento">Alimento</option>
+                            <option value="Roupa">Roupa/Agasalho</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                        <input type="text" id="valor" placeholder="Valor ou Quantidade" required>
+                    </div>
+
+                    <select id="pagamento" required>
+                        <option value="">Forma de entrega/pagamento</option>
+                        <option value="PIX">PIX - 47.xxx.xxx/0001-00</option>
+                        <option value="Cartão">Cartão de crédito</option>
+                        <option value="Entrega no local">Entregue pessoalmente</option>
+                    </select>
+
+                    <textarea id="mensagem" placeholder="Mensagem opcional"></textarea>
+                    <button type="submit" class="btn-primary">Confirmar Doação</button>
+                </form>
+
+                <div id="pix-area" class="hidden">
+                    <h3>PIX Copia e Cola</h3>
+                    <code id="pix-codigo">00020126580014br.gov.bcb.pix...DoaFacil</code>
+                    <p>Após o pagamento, sua doação aparecerá no painel.</p>
+                </div>
+            </div>
+         </section>
+
+         <!-- aba gestor -->
+          <section id="aba-gestor" class="aba hidden">
+            <div class="card">
+                <div class="gestor-header">
+                    <h2>Painel do Gestor</h2>
+                    <div class="stats">
+                        <div><strong id="total-geral">R$ 0</strong><span>Total em dinheiro</span></div>
+                        <div><strong id="total-itens">0</strong><span>Doações recebidas</span></div>
+                    </div>
+                </div>
+
+                <div class="acoes">
+                    <input type="text" id="filtro" placeholder="Filtrar por nome ou tipo.">
+                    <button onclick="exportarCSV()">Exportar CSV</button>
+                    <button onclick="limparTudo()" class="btn-danger">Limpar dados</button>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr><th>Data</th><th>Doador</th><th>Tipo</th><th>Valor/Qtd</th><th>Forma</th><th>Recibo</th></tr>
+                    </thead>
+                    <tbody id="tabelaDoacoes"></tbody>
+                </table>
+            </div>
+          </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
