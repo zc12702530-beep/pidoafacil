@@ -88,13 +88,13 @@
         width: 100%;
         background: #22c55e;
         color: black;
-        padding: 14px;
+        padding: 6px;
         border: none;
         border-radius: 10px;
         font-weight: bold;
         font-size: 16px;
         cursor: pointer;
-        margin-top: 10px;
+        margin: 8px;
     }
 
     .btn-primary:hover{
@@ -185,4 +185,83 @@
 
     th{
         background: #f9fafb;
+    }
+
+    #btn-acessibilidade {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 9999;
+        background: #111827;
+        color: white;
+        border: 2px solid white;
+        padding: 8px 14px;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 13px;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 3);
+    }
+
+    #btn-acessibilidade:hover{
+        background: black;
+    }
+
+    body.alto-contraste{
+        background: black !important;
+        color: white !important;
+    }
+
+    body.alto-contraste header{
+        background: black !important;
+        border-bottom: 3px solid yellow;
+    }
+
+    body.alto-contraste .card{
+        background: black !important;
+        color: white !important;
+        border: 2px solid white !important;
+        box-shadow: none !important;
+    }
+
+    body.alto-contraste input,
+    body.alto-contraste select,
+    body.alto-contraste textarea{
+        background: black !important;
+        color: white !important;
+        border: 2px solid yellow !important;
+    }
+
+    body.alto-contraste input::placeholder,
+    body.alto-contraste textarea::placeholder{
+        color: #ccc !important;
+    }
+
+    body.alto-contraste button{
+        background: yellow !important;
+        color: black !important;
+        border: 2px solid yellow !important;
+        font-weight: bold !important;
+    }
+
+    body.alto-contraste #btn-acessibilidade{
+        background: white !important;
+        color: black !important;
+        border: 3px solid yellow !important;
+    }
+
+    body.alto-contraste table th{
+        background: yellow !important;
+        color: black !important;
+    }
+
+    body.alto-contraste table td{
+        border-bottom: 1px solid white !important;
+        color: white !important;
+    }
+
+    body.alto-contraste .stas div{
+        background: black !important;
+        border: 1px solid white !important;
+        color: white !important;
     }

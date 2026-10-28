@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <button id="btn-acessibilidade" onclick="toggleContraste()" aria-label="Ativar alto contraste" title="Alto Contraste (Alt+C)">Alto Contraste</button>
+    <header role="banner">
         <h1>DoaFácil</h1>
         <p>Sistema Gestor de Doações - APAE Bananal-SP</p>
         <nav>
@@ -26,6 +27,27 @@
                     <div id="campos-nome">
                         <input type="text" id="nome" placeholder="Seu nome completo" required>
                         <input type="email" id="email" placeholder="Seu e-mail" required>
+                    </div>
+                    <!-- área endereço -->
+                    <div class="row">
+                        <input type="text" id="cep" placeholder="CEP (ex.: 12850-085)" maxlength="9" onblur="buscarCEP()">
+                        <button type="button" class="btn-primary" onclick="buscarCEP()" style="max-width: 100px; font-size: 12px;">Buscar CEP</button>
+                    </div>
+                    <div id="cep-status" style="font-size: 12px;color: #665;margin-bottom: 5px;"></div>
+
+                    <div class="row">
+                        <input type="text" id="logradouro" placeholder="Logradouro (Rua, Av...)" style="flex: 3.5;">
+                        <input type="text" id="numero" placeholder="Nº" style="flex: 0.5;">
+                    </div>
+
+                    <div class="row">
+                        <input type="text" id="bairro" placeholder="Bairro">
+                        <input type="text" id="complemento" placeholder="Complemento (Opcional)">
+                    </div>
+
+                    <div class="row">
+                        <input type="text" id="cidade" placeholder="Cidade" style="flex: 3.5;">
+                        <input type="text" id="estado" placeholder="UF" style="flex: 0.5;">
                     </div>
 
                     <div class="row">
@@ -77,7 +99,7 @@
 
                 <table>
                     <thead>
-                        <tr><th>Data</th><th>Doador</th><th>Tipo</th><th>Valor/Qtd</th><th>Forma</th><th>Recibo</th></tr>
+                        <tr><th>Data</th><th>Doador</th><th>Tipo</th><th>Valor/Qtd</th><th>Forma</th><th>Cidade</th><th>Endereço</th><th>Recibo</th></tr>
                     </thead>
                     <tbody id="tabelaDoacoes"></tbody>
                 </table>
